@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "name": "UI",
+  "maps": [
+    {
+      "name": "UI",
+      "actions": [
+        { "name": "Navigate", "type": "value", "control": "Vector2" },
+        { "name": "Submit", "type": "button" },
+        { "name": "Cancel", "type": "button" }
+      ],
+      "bindings": [
+        { "action": "Navigate", "path": "<Gamepad>/leftStick" },
+        {
+          "action": "Navigate",
+          "composite": "2DVector(mode=0)",
+          "parts": {
+            "up": "<Gamepad>/dpad/up",
+            "down": "<Gamepad>/dpad/down",
+            "left": "<Gamepad>/dpad/left",
+            "right": "<Gamepad>/dpad/right"
+          }
+        },
+        { "action": "Submit", "path": "<Gamepad>/buttonSouth" },
+        { "action": "Cancel", "path": "<Gamepad>/buttonEast" }
+      ]
+    }
+  ]
+}

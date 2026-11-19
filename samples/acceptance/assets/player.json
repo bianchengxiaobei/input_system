@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "name": "Player",
+  "maps": [
+    {
+      "name": "Player",
+      "actions": [
+        { "name": "Move", "type": "value", "control": "Vector2" },
+        { "name": "Jump", "type": "button" },
+        { "name": "Fire", "type": "button" }
+      ],
+      "bindings": [
+        {
+          "action": "Move",
+          "composite": "2DVector(mode=0)",
+          "parts": {
+            "up": "<Keyboard>/w",
+            "down": "<Keyboard>/s",
+            "left": "<Keyboard>/a",
+            "right": "<Keyboard>/d"
+          }
+        },
+        { "action": "Move", "path": "<Gamepad>/leftStick" },
+        { "action": "Jump", "path": "<Keyboard>/space" },
+        { "action": "Jump", "path": "<Gamepad>/buttonSouth" },
+        { "action": "Fire", "path": "<Mouse>/leftButton" }
+      ]
+    }
+  ],
+  "schemes": [
+    { "name": "Keyboard&Mouse", "bindingGroup": "Keyboard&Mouse", "devices": ["Keyboard", "Mouse"] },
+    { "name": "Gamepad", "bindingGroup": "Gamepad", "devices": ["Gamepad"] }
+  ]
+}

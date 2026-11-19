@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "name": "E2E Player",
+  "maps": [
+    {
+      "name": "Gameplay",
+      "actions": [
+        {
+          "name": "Fire",
+          "type": "button"
+        },
+        {
+          "name": "Move",
+          "type": "value",
+          "control": "Vector2"
+        }
+      ],
+      "bindings": [
+        {
+          "action": "Fire",
+          "path": "<Keyboard>/space"
+        },
+        {
+          "action": "Move",
+          "path": "<Gamepad>/leftStick"
+        }
+      ]
+    }
+  ],
+  "schemes": [
+    {
+      "name": "Keyboard&Mouse",
+      "devices": [
+        "Keyboard",
+        "Mouse"
+      ]
+    }
+  ]
+}

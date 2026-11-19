@@ -1,0 +1,92 @@
+<rml>
+<head>
+    <link type="text/rcss" href="main.rcss"/>
+</head>
+<body>
+    <div id="app">
+        <h1>insys M5 - Debugger &amp; Trace</h1>
+        <p id="status_line">Loading...</p>
+
+        <div id="tabs">
+            <button id="tab_devices" class="tab">Devices</button>
+            <button id="tab_actions" class="tab">Actions</button>
+            <button id="tab_ui" class="tab">UI Input</button>
+            <button id="tab_rebind" class="tab">Rebinding</button>
+            <button id="tab_debugger" class="tab">Debugger</button>
+            <button id="tab_trace" class="tab">Trace</button>
+        </div>
+
+        <div id="page_devices" class="page">
+            <h2>Devices</h2>
+            <p id="devices">Devices: ...</p>
+            <p id="gamepad">Gamepad: none</p>
+        </div>
+
+        <div id="page_actions" class="page">
+            <h2>Actions</h2>
+            <p id="action_move">Move: ...</p>
+            <p id="action_jump">Jump: ...</p>
+            <p id="action_fire">Fire: ...</p>
+            <p id="ui_gate">UI gate: ...</p>
+            <p id="action_counts">Action counts: ...</p>
+        </div>
+
+        <div id="page_ui" class="page">
+            <h2>UI Input</h2>
+            <button id="clickme">Click me</button>
+            <p id="status">clicks: 0</p>
+            <input type="text" id="textbox" placeholder="type here"/>
+            <div id="scroll_log" class="scroll">
+                <p>Scroll list 01</p><p>Scroll list 02</p><p>Scroll list 03</p>
+                <p>Scroll list 04</p><p>Scroll list 05</p><p>Scroll list 06</p>
+                <p>Scroll list 07</p><p>Scroll list 08</p><p>Scroll list 09</p>
+                <p>Scroll list 10</p><p>Scroll list 11</p><p>Scroll list 12</p>
+            </div>
+            <p id="ui_status">UI: ...</p>
+            <p id="focus_status">Focus: ...</p>
+            <p id="nav_status">Navigation: gamepad dpad/left stick, A confirm, B cancel</p>
+            <button id="nav_toggle">Toggle navigation source</button>
+        </div>
+
+        <div id="page_rebind" class="page">
+            <h2>Rebinding</h2>
+            <p id="binding_jump">Jump binding: ...</p>
+            <p id="binding_fire">Fire binding: ...</p>
+            <button id="rebind_jump">Rebind Jump</button>
+            <button id="rebind_fire">Rebind Fire</button>
+            <button id="save_bindings">Save overrides</button>
+            <button id="reset_bindings">Reset overrides</button>
+            <p id="rebind_status">Ready</p>
+        </div>
+
+        <div id="page_debugger" class="page">
+            <h2>Debugger</h2>
+            <p id="debugger_summary">Debugger: ...</p>
+            <div class="debug_tools">
+                <button id="debugger_pause">Pause refresh</button>
+                <button id="debugger_clear_events">Clear events</button>
+            </div>
+            <h3>Devices and controls</h3>
+            <div id="debugger_devices" class="debug_box"></div>
+            <h3>Actions</h3>
+            <div id="debugger_actions" class="debug_box"></div>
+            <h3>Recent events</h3>
+            <div id="debugger_events" class="debug_box"></div>
+            <h3>Bindings</h3>
+            <div id="debugger_bindings" class="debug_box"></div>
+        </div>
+
+        <div id="page_trace" class="page">
+            <h2>Event Trace</h2>
+            <p id="trace_status">Trace: stopped</p>
+            <button id="trace_toggle">Start recording</button>
+            <button id="trace_clear">Clear</button>
+            <button id="trace_save">Save</button>
+            <button id="trace_load">Load</button>
+            <button id="trace_replay">Replay</button>
+            <button id="trace_step">Step</button>
+            <p id="trace_help">Recorded events use the same low-level event format as the runtime. Replay updates the current manager.</p>
+        </div>
+    </div>
+</body>
+</rml>

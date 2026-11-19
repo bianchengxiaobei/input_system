@@ -1,0 +1,151 @@
+body {
+    font-family: SegoeUI;
+    font-size: 17px;
+    color: #f0f0f5;
+    background: #15151c;
+}
+
+#app {
+    display: block;
+    width: 860px;
+    margin: 32px;
+    padding: 24px;
+    background: #262631;
+    border-radius: 10px;
+    border: 1px #3a3a48;
+}
+
+h1 {
+    display: block;
+    font-size: 28px;
+    margin-bottom: 4px;
+}
+
+h2 {
+    display: block;
+    font-size: 20px;
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+
+h3 {
+    display: block;
+    font-size: 16px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+p {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#tabs {
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+button {
+    display: inline-block;
+    padding: 7px 14px;
+    margin-right: 8px;
+    margin-top: 8px;
+    background: #3d8b5f;
+    color: #ffffff;
+    border-radius: 5px;
+    nav: auto;
+}
+
+button:hover {
+    background: #4aa570;
+}
+
+button:active {
+    background: #2f6f4c;
+}
+
+button.tab {
+    background: #3a3a48;
+}
+
+button.tab:hover {
+    background: #4a4a5c;
+}
+
+.page {
+    display: none;
+}
+
+#page_devices {
+    display: block;
+}
+
+#devices, #gamepad, #action_move, #action_jump, #action_fire,
+#ui_gate, #action_counts, #ui_status, #focus_status, #nav_status,
+#binding_jump, #binding_fire, #rebind_status {
+    font-size: 15px;
+    color: #b8b8c8;
+    margin-top: 10px;
+}
+
+input {
+    display: block;
+    width: 420px;
+    margin-top: 12px;
+    padding: 7px;
+    background: #16161d;
+    color: #f0f0f5;
+    border: 1px #4a4a5a;
+    border-radius: 4px;
+}
+
+.scroll {
+    display: block;
+    height: 112px;
+    margin-top: 10px;
+    padding: 8px;
+    overflow: auto;
+    background: #16161d;
+    border: 1px #4a4a5a;
+    border-radius: 4px;
+}
+
+.debug_tools {
+    display: block;
+    margin-top: 6px;
+}
+
+.debug_box {
+    display: block;
+    max-height: 170px;
+    overflow: auto;
+    padding: 7px;
+    margin-top: 4px;
+    background: #16161d;
+    border: 1px #4a4a5a;
+    border-radius: 4px;
+}
+
+.debug_box p {
+    margin-bottom: 3px;
+    font-size: 13px;
+    color: #c8c8d8;
+}
+
+.phase-waiting { color: #9a9aad; }
+.phase-started { color: #e5c35b; }
+.phase-performed { color: #62c878; }
+.phase-canceled { color: #e06060; }
+.phase-disabled { color: #777788; }
+
+#debugger_summary, #trace_status, #trace_help {
+    font-size: 15px;
+    color: #b8b8c8;
+    margin-top: 8px;
+}
+
+.scroll p {
+    margin-bottom: 6px;
+    font-size: 14px;
+}

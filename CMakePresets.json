@@ -1,0 +1,80 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "default",
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+        "VCPKG_TARGET_TRIPLET": "x64-windows",
+        "INSYS_BUILD_TESTS": "ON",
+        "INSYS_BUILD_DEMO": "ON"
+      }
+    },
+    {
+      "name": "editor",
+      "inherits": "default",
+      "binaryDir": "${sourceDir}/build-editor",
+      "cacheVariables": {
+        "INSYS_BUILD_EDITOR": "ON",
+        "INSYS_BUILD_EDITOR_WEB": "OFF",
+        "INSYS_BUILD_EDITOR_SHELL": "ON"
+      }
+    },
+    {
+      "name": "editor-unix",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build-editor-unix",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "INSYS_BUILD_EDITOR": "ON",
+        "INSYS_BUILD_EDITOR_WEB": "OFF",
+        "INSYS_BUILD_EDITOR_SHELL": "ON",
+        "INSYS_BUILD_TESTS": "OFF",
+        "INSYS_BUILD_DEMO": "OFF"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "debug",
+      "configurePreset": "default",
+      "configuration": "Debug"
+    },
+    {
+      "name": "release",
+      "configurePreset": "default",
+      "configuration": "Release"
+    },
+    {
+      "name": "editor-debug",
+      "configurePreset": "editor",
+      "configuration": "Debug"
+    },
+    {
+      "name": "editor-release",
+      "configurePreset": "editor",
+      "configuration": "Release"
+    },
+    {
+      "name": "editor-unix-debug",
+      "configurePreset": "editor-unix"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "debug",
+      "configurePreset": "default",
+      "configuration": "Debug",
+      "output": { "outputOnFailure": true }
+    },
+    {
+      "name": "editor-debug",
+      "configurePreset": "editor",
+      "configuration": "Debug",
+      "output": { "outputOnFailure": true }
+    }
+  ]
+}

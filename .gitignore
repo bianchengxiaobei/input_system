@@ -1,0 +1,11 @@
+build/
+build-editor/
+build-editor-unix/
+out/
+build-asan/
+
+editor/web/node_modules/
+editor/web/dist/
+editor/web/e2e/.tmp/
+editor/web/test-results/
+editor/web/playwright-report/
